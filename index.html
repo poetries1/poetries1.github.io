@@ -1,37 +1,328 @@
-<!DOCTYPE html>
-<html ng-app="deerResume">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DeerResume</title>
-  <link href="image/browser.png" rel="shortcut icon">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/yue.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="bower/components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="bower/components/ng-notify/dist/ng-notify.min.css">
-  <script src="bower/components/jquery/dist/jquery.min.js"></script>
-  <script src="bower/components/angular/angular.min.js"></script>
-  <script src="bower/components/angular-route/angular-route.min.js"></script>
-  <script src="bower/components/angular-sanitize/angular-sanitize.min.js"></script>
-  <script src="bower/components/showdown/compressed/showdown.js"></script>
-  <script src="bower/components/ng-notify/dist/ng-notify.min.js"></script>
-  <script src="js/wizMarkdown.min.js"></script>
-  <script src="js/jspdf.min.js"></script>
-  <script src="js/jspdf.plugin.addhtml.js"></script>
-  <script src="bower/components/angular-cookies/angular-cookies.min.js"></script>
-  <script src="bower/components/angularLocalStorage/src/angularLocalStorage.js"></script>
-  <script src="js/app.js"></script>
-</head>
-<body>
-  <base target="_blank">
-  <div ng-view id="resume_body"></div>
-  <form action="http://pdf.ftqq.com" method="post" target="_blank" id="hform">
-    <input type="hidden" name="title"/>
-    <input type="hidden" name="subtitle"/>
-    <input type="hidden" name="content"/>
-    <input type="hidden" name="pdfkey"/>
-  </form>  
-</body>
+<!doctype html>
+<html lang="zh" class="no-js">
 
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>谢永财-前端开发工程师</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="stylesheet" href="lib/Velocity.js/css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<script src="lib/Velocity.js/js/modernizr.js"></script>
+		<script type="text/javascript" src="lib/echart/echarts.min.js"></script>
+		<![endif]-->
+	</head>
+	
+	<!--data-animation属性的可选值有：none/scaleDown/rotate/gallery/catch/opacity/fixed/parallax-->
+	<!--
+		data-hijacking属性的可选值有：on/off。
+		页面滚动特效的HTML结构就是一组元素加上一个上下导航按钮。
+		每一个都简单的设置为100vh，占满整个视口。背景颜色和图片使用:nth-of-type()选择器来选择相应的元素来制作。
+		当data-hijacking = off的时候，每一个section的都根据它相对于视口的位置来动画。
+		当data-hijacking = on的时候，插件中使用Velocity UI Pack registration feature来定义每一个动画的效果
+	-->
+	
+	<body data-hijacking="on" data-animation="gallery">
+		<!--首页-->
+		<section class="cd-section visible">
+			<div class="home" name="home">
+				<div class="homeTitle"></div>
+			</div>
+		</section>
+		<!--个人简介-->
+		<section class="cd-section">
+			<div class="info">
+				<div class="nameApply">
+					<div class="name">Name:谢永财</div>
+					<div class="apply">Apply for：Web前端工程师</div>
+				</div>
+				<div class="infoContainer">
+					<h1 class='am'>About Me</h1>
+					<div class="infoDetil">
+						<ul>
+							<li><span>学校:</span>玉林师范学院</li>
+							<li><span>专业:</span>测控技术与仪器</li>
+							<li><span>学历:</span>本科</li>
+							<li><span>学分绩点:</span>3.10 / 4.00</li>
+							<li><span>外语水平:</span>CET-4</li>
+							<li><span>兴趣爱好:</span>爱逛各种技术论坛社区、喜欢分享、喜欢阅读</li>
+						</ul>
+					</div>
+					<div class="leaderboard">
+						<h1>部分奖项</h1>
+						<ol>
+							<li>
+								<mark>英语四级</mark>
+								<small>2015.06</small>
+							</li>
+							<li>
+								<mark>三好学生</mark>
+								<small>2015.01</small>
+							</li>
+							<li>
+								<mark>全国大学生英语竞赛优胜奖</mark>
+								<small>2014.06</small>
+							</li>
+							<li>
+								<mark>全国高等学校计算机等级考试一级证书</mark>
+								<small>2013.12</small>
+							</li>
+						</ol>
+					</div>
+				</div>
+				<div class="fs">
+					<div class="footAdd"></div>
+					<div class="ss-style-boxes"></div>
+				</div>	
+			</div>
+		</section>
+		<!--技能掌握-->
+		<section class="cd-section">
+			<div class="skill">
+				<div class="skillContainer">
+					<div class="zbt">技能掌握</div>
+				<div id="circleText"></div>
+				<div class="skillLIst">
+					<ul class="tech-skill-list">
+						<li class="tech-skill-list__item tech-skill-list__item-html-and-css tech-skill-list__item--mastered">
+							<h4 class="tech-skill-list__item__name">HTML &amp; CSS</h4>
+							<div class="tech-skill-list__item__detail">
+								<ul class="list">
+									<li>熟悉HTML+CSS网页布局与样式</li>
+									<li>能使用合适的结构编写兼容主流浏览器的页面布局</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-html-and-css tech-skill-list__item--mastered">
+							<h4 class="tech-skill-list__item__name">HTML5 &amp; CSS3</h4>
+							<div class="tech-skill-list__item__detail">
+								<ul class="list">
+									<li>了解HTML5新标签的语义</li>
+									<li>能适当运用CSS3使页面在现代浏览器上效果更佳</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-javascript tech-skill-list__item--mastered">
+							<h4 class="tech-skill-list__item__name">JavaScript &amp; Ajax &amp; jQuery</h4>
+							<div class="tech-skill-list__item__detail">
+								<ul class="list">
+									<li>掌握JavaScript,能够编写基本的JS原生代码</li>
+									<li>熟练掌握 jQuery，实现日常需要的交互效果</li>
+									<li>熟悉一些正则表达式的使用</li>
+									<li>掌握Ajax的概念和原理</li>
+									<li>会使用类似jQuery的$.ajax()方法进行开发</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-bs tech-skill-list__item--mastered">
+							<h4 class="tech-skill-list__item__name">bootstrap</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>了解bootstrap的使用</li>
+									<li>能够运用bootstrap进行pc端的开发</li>
+								</ul>
+							</div>
+						</li>
+						
+						<li class="tech-skill-list__item tech-skill-list__item-sql tech-skill-list__item--practised">
+							<h4 class="tech-skill-list__item__name">Git &amp; GitHub</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>能够使用Git等版本控制工具</li>
+									<li>日常的开发用Github进行代码托管</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-photoshop">
+							<h4 class="tech-skill-list__item__name">PS &amp; Sublime &amp;Webstorm</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>能够使用PS、Sublime等工具开发</li>
+								</ul>
+							</div>
+						</li>
+						<li class="tech-skill-list__item tech-skill-list__item-photoshop">
+							<h4 class="tech-skill-list__item__name">目前在关注Nodejs、Vue等</h4>
+							<div class="tech-skill-list__item__detail ">
+								<ul class="list">
+									<li>能够使用hexo搭建部署博客</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				</div>
+				
+
+			</div>
+		</section>
+		
+		<!--实践经验-->
+		<section class="cd-section">
+			<div class="experience">
+				<div class="zbt">一路走来</div>
+				<div class="experienceList">
+					<div class="rect"></div>
+					<ul>
+						<li>
+							<div class="time">2014.03-2014.07</div>
+							<div class="point">●</div>
+							<div class="list">
+								<div class="gs">
+									<a href="http://www.ahwater.net/" target="view_window">用WordPress搭建了一个网站、接触SEO</a>
+								</div>
+								<div class="jl">
+									在某课堂看了一些建站教程，对网站建设产生了极大兴趣。第一次在本地做起来的网站很成功，后来了解到域名空间，折腾上线了。从那时开始了解网站建设相关的东西。
+									网站上线后，听说有方法可以让站点排名靠近，于是搜索得知SEO，接触利为汇，参加线上培训开始学习过一段时间。
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="time">2014.10-2015.03</div>
+							<div class="point">●</div>
+							<div class="list">
+								<div class="gs">
+									<a href="http://3992420.01p.com/" target="view_window">接触淘宝客、经营淘宝店</a>
+								</div>
+								<div class="jl">
+									大二上学期，因为一些原因了解到了淘宝客，为了推广淘宝商家的产品赚取佣金，建了一些网站，主要基于帝国CMS、BBS论坛，由于没什么人气后来做不下去了。
+									同年的几个月开始学习淘宝营销、网络营销方面的知识。自己开了淘宝店，好多淘宝营销的开始不懂，商品总是排名靠后。逛各种论坛学习，后来流量好转了很多。订单成交额也上来了。
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="time">2016.07-至今</div>
+							<div class="point">●</div>
+							<div class="list">
+								<div class="gs">
+									<a href="http://blog.poetries.top/" target="view_window">建立属于自己的博客、开始学习前端</a>
+								</div>
+								<div class="jl">
+									大三下学期，想到了在学校时间不多了，自己学的东西不够系统，很零散。七月份，开始系统学习前端相关的知识，知道了自己不知道的东西很多。学习期间，记录了很多笔记。
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+		<!--作品展示-->
+		<section class="cd-section">
+			<div class="demoShow">
+				<div class="zbt">一些个人作品展示</div>
+				<div class="row">
+					<div class="single-member effect-7">
+		                <div class="member-info">
+		                	<h3>小米官网</h3>
+		                    <h5>模仿的一些页面、特效</h5>
+		                </div>
+		                <div class="member-image">
+		                	<img src="img/demo1.jpg" >
+		                </div>
+		                <div class="more-info">
+		                	<p>在学习前端的过程中，对于自己感兴趣的一些页面特效，我都会尝试着去模仿，然后按照自己的意愿进行修改。模仿过的demo有手机京东，微金所，还有轮播图、tab栏、手风琴、瀑布流等炫酷的js效果</p>
+		                </div>
+		            </div>
+		            <div class="single-member effect-8">
+		                <div class="member-info">
+		                	<h3>天猫首页</h3>
+		                    <h5>实现天猫首页静态页面</h5>
+		                </div>
+		                <div class="member-image">
+		                	<img src="img/demo2.jpg" >
+		                </div>
+		                <div class="more-info">
+		                	<p>在大三暑假实习期间，参与的一项政府工程。在公司和个人缺乏经验的情况下顶住压力，根据开发指导意见，从前台页面，到后台配置，再到数据库的创建维护，全部参与。由于需要回校上课，项目还没做完就离开项目组返校上课</p>
+		                </div>
+		            </div>
+		            <div class="single-member effect-9">
+		                <div class="member-info">
+		                	<h3>礼品商城</h3>
+		                    <h5>基于Eschop后台开发的商城</h5>
+		                </div>
+		                <div class="member-image">
+		                	<img src="img/demo3.jpg" >
+		                </div>
+		                <div class="more-info">
+		                	<p>大四在校期间，根据个人所学的前端知识，写的一个pc版的个人简历。简历整体基于Velocity.js框架，简历中大量运用html5和css3的新知识，实现了很多好看的特效；整个项目的样式是通过less语言写的，提高了开发效率</p>
+		                </div>
+		            </div>
+				</div>
+			</div>
+		</section>
+		
+		<!--个人能力与自我评价-->
+		<section class="cd-section">
+			<div class="personSkill">
+				<div class="zbt" style="color: snow;">自我评价分析</div>
+				<div class="psContainer">
+					<div class="pj">
+						<header class="title">自我评价:</header>
+						<ol>
+							<li class="first">热爱阅读、爱分享、爱折腾</li>
+							<li>能独立解决问题，能有效管理时间</li>
+							<li>关注主流技术的发展趋势，经常活跃于GitHub、CSDN、简书等社区</li>
+						</ol>
+						<header class="title">欠缺之处:</header>
+						<ol>
+							<li class="first">经验不足,对业务的思考很欠缺,但我会多思考这些问题,想办法弥补自己的不足</li>
+							<li>英语没过六级且开发经验不足，在将来的生活中用自己的行动克服这些问题</li>
+							
+						</ol>
+					</div>
+					<div class="echartContainer">
+						<header class="echartTitle">个人能力</header>
+						<div id="echart" style="width: 500px;height:500px;"></div>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+		<!--联系我-->
+		<section class="cd-section">
+			<div class="contactMe">
+				<div class="contactContainer">
+				<div class="zbt" style="color:#FE8F0A;">联系我</div>
+				<div class="lxfs" style="margin-left: 513px;">
+					<header>联系方式</header>
+					<ul>
+						<li>电话：18878554070</li>
+						<li>邮箱：p@poetries.top</li>
+					</ul>
+					<div class="chatLogo">
+						<img src="img/QQ.png" id="qq" width="64" height="64" style="border-raduis:42px;"/>
+						<img src="img/wx.png" id="wx"  width="64" height="64" style="border-raduis:42px;"/>
+						<a href="https://github.com/poetries" target="view_window"><img src="img/github.png" /></a>
+					</div>
+					<div class="downloadWrap">
+						<a id="download" href="resource/web前端-谢永财.pdf" download="web前端-谢永财">下载简历</a>
+					</div>
+				</div>
+				</div>
+				
+			</div>
+		</section>
+		<!--控制-->
+		<nav>
+			<ul class="cd-vertical-nav">
+				<li>
+					<a href="javascript:;" class="cd-prev inactive">Next</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="cd-next">Prev</a>
+				</li>
+			</ul>
+		</nav>
+
+		<script src="lib/Velocity.js/js/jquery-2.1.4.js"></script>
+		<script src="lib/Velocity.js/js/velocity.min.js"></script>
+		<script src="lib/Velocity.js/js/velocity.ui.min.js"></script>
+		<script src="lib/Velocity.js/js/main.js"></script>
+		<script type="text/javascript" src="lib/konva/konva.min.js"></script>
+		<script type="text/javascript" src="js/CircleText.js"></script>
+		<script type="text/javascript" src="lib/layer/layer.js" ></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</body>
 </html>
