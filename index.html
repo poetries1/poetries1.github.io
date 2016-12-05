@@ -8,16 +8,6 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="dist/css/style.min.css">
     <link rel="stylesheet" href="dist/css/fontello.min.css">
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-48084758-4', 'auto');
-        ga('send', 'pageview');
-
-    </script>
 
 	<style>
 
@@ -143,17 +133,19 @@
             <ul class="main-info">
                 <li class="someRight">
                     <dt><i class="icon-bookmark"></i>Basic info. 基本信息</dt>
-                    <dd><span class="samllDot"><em></em>个人信息:</span> 谢永财 / 男 / 1993</dd>
 					<dd><span class="samllDot"><em></em>籍贯:</span> 广西北海</dd>
-					<dd><span class="samllDot"><em></em>英语水平:</span> 四级</dd>
-					 <dd><span class="samllDot"><em></em>教育背景:</span> 2013.09-2017.06 / 本科 / 测控技术与仪器 / 玉林师范学院</dd>
 					 <dd><span class="samllDot"><em></em>简书:</span> <a href="http://www.jianshu.com/users/94077fcddfc0/latest_articles" target="_blank">@poetries</a></dd>
                      <dd><span class="samllDot"><em></em>Blog:</span> <a href="http://blog.poetries.top" target="_blank">http://blog.poetries.top</a></dd>
                      <dd><span class="samllDot"><em></em>Github:</span> <a href="https://www.github.com/poetries" target="_blank">https://www.github.com/poetries</a></dd>
 
-                    
                 </li>
-				
+				 <li class="someRight">
+                    <dt><i class="icon-bookmark"></i>Education. 教育信息</dt>
+					<dd><span class="samllDot"><em></em>学校名称:</span> 玉林师范学院</dd>
+					<dd><span class="samllDot"><em></em>英语水平:</span> 四级 | 能浏览阅读英文文档及其他资料|能在StackOverflow等社区正常交流</dd>
+					<dd><span class="samllDot"><em></em>专业学位:</span> 测控技术与仪器 / 本科 </dd>
+					<dd><span class="samllDot"><em></em>毕业时间:</span> 2017.06</dd>
+                </li>
 				
 				<li>
                     <dt><i class="icon-bookmark "></i>Practice. 实践经历</dt>
@@ -182,7 +174,7 @@
 				
              <!--技能清单-->
                 <li>
-                    <dt><i class="icon-bookmark"></i>Skill. 技能清单</dt>
+                    <dt><i class="icon-bookmark"></i>Skill. 技术能力</dt>
                     <ul class="exp">
                         <li>
                             <div class="circle"></div>
@@ -196,7 +188,7 @@
                             <p class="samllDot"><em></em>掌握JavaScript,能够编写基本的JS原生代码</p>
                             <p class="samllDot"><em></em>熟练掌握 jQuery，实现日常需要的交互效果</p>
 							<p class="samllDot"><em></em>熟悉一些正则表达式的使用</p>
-							<p class="samllDot"><em></em>掌握Ajax的概念和原理</p>
+							<p class="samllDot"><em></em>使用ajax与后端对接api实现功能的完成</p>
 							<p class="samllDot"><em></em>会使用类似jQuery的$.ajax()方法进行开发</p>
                         </li>
 						<li>
@@ -209,7 +201,7 @@
                             <div class="circle"></div>
                             <h4>bootstrap</h4>
                             <p class="samllDot"><em></em>了解bootstrap的使用</p>
-                            <p class="samllDot"><em></em>能够运用bootstrap进行pc端的开发</p>
+                            <p class="samllDot"><em></em>使用Bootstrap框架对网页进行响应式布局</p>
                         </li>
 						<li>
                             <div class="circle"></div>
@@ -220,10 +212,11 @@
 						<li>
                             <div class="circle"></div>
                             <h4>其他</h4>
+							 <p class="samllDot"><em></em>了解LESS和SASS等预处理工具</p>
                             <p class="samllDot"><em></em>能够使用PS、Sublime、Webstorm等工具开发</p>
 							<p class="samllDot"><em></em>能够使用Firebug,Chrome调试工作</p>
 							<p class="samllDot"><em></em>能够熟练使用 Markdown 进行写作</p>
-                            <p class="samllDot"><em></em>目前在关注Nodejs、Vue等</p>
+                            <p class="samllDot"><em></em>目前在关注学习Nodejs、Vue、ES6等</p>
                         </li>
                     </ul>
 
@@ -232,10 +225,20 @@
 				<!--项目经验-->
 				
 				   <li>
-                    <dt><i class="icon-bookmark"></i>Experience. 项目经验(待完善)</dt>
+                    <dt><i class="icon-bookmark"></i>Experience. 项目经历</dt>
                     
                     <h3>个人项目</h3>
                     <ul class="exp">
+						<li>
+                            <div class="circle"></div>
+                            <h4>
+                                基于canvas的HTML5画图板
+                                <a href="https://github.com/poetries/drawing-board" target="_blank"><i class="icon-link"></i>源代码</a>
+                                <a href="http://blog.poetries.top/drawing-board" target="_blank"><i class="icon-link"></i>演示</a>
+                            </h4>
+                            <p> 使用流行技术HTML5中canvas API以及JavaScript绘制的一个画图板,实现画图板的下载、绘画、保存等功能,并且通过localStorage实现本地存储功能</p>
+                            <img src="img/draw.png">
+                        </li>
                         <li>
                             <div class="circle"></div>
                             <h4>
