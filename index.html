@@ -25,7 +25,40 @@
 		.samllDot {
 			position:relative;
 		}
-		
+		.title1:before {
+			content: "";
+			width: 6px;
+			height: 6px;
+			position: absolute;
+			left: -11px;
+			top: 5px;
+			background: #f1f1f7;
+			border-radius: 50%;
+			border: 1px solid #608fbf;
+		}
+		.title1 {
+			display: inline-block;
+			height: 30px;
+			width: 67px;
+			position: relative;
+			
+		}
+		.title1.first {
+			top: -20px;
+		}
+		.title1.second{
+			top: -42px;
+		}
+		.title1.three {
+			top: -21px;
+		}
+
+		.desc {
+			display: inline-block;
+			width: 600px;
+			text-align: justify;
+			color: #616161;
+		}
 		@font-face {
 		  font-family: 'iconfont';
 		  src: url('font/iconfont.eot');
@@ -68,7 +101,7 @@
     <div class="container">
         <div class="sidebar">
             <div class="title">
-                <img src="img/head.png" style=" border-radius: 71px;">
+                <img src="img/head.jpg" style=" border-radius: 71px;">
                 <h1>谢永财的简历</h1>
                 <h2>"Write the Code. Change the World."</h2>
             </div>
@@ -83,7 +116,7 @@
 				</li>
                 <li class="someRight">
                     <dt><i class="icon-bookmark"></i>Application. 应聘岗位</dt>
-                    <dd>前端工程师</dd>
+                    <dd>前端开发</dd>
                 </li>
             </ul>
         <div class="note" style="text-indent: 0px;">
@@ -171,39 +204,37 @@
 				   <li>
                     <dt><i class="icon-bookmark"></i>Experience. 项目经历</dt>
                     
-                    <h3>个人项目</h3>
-                    <ul class="exp">
+                    
+                    <ul class="exp" style="margin-top:25px">
 						<li>
                             <div class="circle"></div>
+                            <h4>
+                                音乐播放器
+                                <a href="https://github.com/poetries/music-player" target="_blank"><i class="icon-link"></i>源代码</a>
+                                <a href="http://blog.poetries.top/music-player" target="_blank"><i class="icon-link"></i>演示</a>
+                            </h4>
+
+                            <p class="title1 first">项目描述: </p>
+							<div class="desc">
+								使用HTML5实现的音乐播放器,使用json数据模拟音乐源，解决canvas绘制音普的难点和实现了歌词同步。
+							</div>
+							
+                             <!-- <img src="img/draw.png">-->
+                        </li>
+						<li>
+                            <div class="circle second"></div>
                             <h4>
                                 绘图板
                                 <a href="https://github.com/poetries/drawing-board" target="_blank"><i class="icon-link"></i>源代码</a>
                                 <a href="http://blog.poetries.top/drawing-board" target="_blank"><i class="icon-link"></i>演示</a>
                             </h4>
-                            <p> 使用canvas API、JavaScript实现画图板的下载、绘画、保存等功能,并且通过localStorage实现本地存储。在项目过程中遇到数据存储的问题，使用了localStorage解决本地存储问题</p>
+                            <p class="title1 second">项目描述: </p>
+							<div class="desc">
+								使用canvas API、JavaScript实现画图板的下载、绘画、保存等功能,并且通过localStorage实现本地存储。在项目过程中遇到数据存储的问题，使用了localStorage解决本地存储问题
+							</div>
                              <!-- <img src="img/draw.png">-->
                         </li>
-						<li>
-                            <div class="circle"></div>
-                            <h4>
-                                H5音乐播放器
-                                <a href="https://github.com/poetries/music-player" target="_blank"><i class="icon-link"></i>源代码</a>
-                                <a href="http://blog.poetries.top/music-player" target="_blank"><i class="icon-link"></i>演示</a>
-                            </h4>
-                            <p>使用HTML5实现的音乐播放器,使用json数据模拟音乐源，解决canvas绘制音普的难点和实现了歌词同步。</p>
-                             <!-- <img src="img/draw.png">-->
-                        </li>
-											
-						<li>
-                            <div class="circle"></div>
-                            <h4>
-                               礼品商城的静态页面开发
-                                <a href="https://github.com/poetries/project-demos/tree/gh-pages/web/shop" target="_blank"><i class="icon-link"></i>源代码</a>
-                                <a href="http://blog.poetries.top/project-demos/web/shop/dist/html/index.html" target="_blank"><i class="icon-link"></i>演示</a>
-                            </h4>
-                            <p> 独立完成一个网站的各个页面的开发，首页、商品详情页、登录页、订单页、注册等页面。使用gulp构建工作流。</p>
-                            <!--  <img src="img/shop.png">-->
-                        </li>
+						
 						<li>
 						 <div class="circle"></div>
                             <h4>
@@ -211,9 +242,22 @@
                                 <a href="https://github.com/poetries/plane" target="_blank"><i class="icon-link"></i>源代码</a>
                                 <a href="http://blog.poetries.top/plane" target="_blank"><i class="icon-link"></i>演示</a>
                             </h4>
-                            <p> 实现一个在PC端的飞机战斗游戏，通过鼠标移动来控制飞机的位置移动，击打对面的敌机，并躲避敌人的子弹</p>
+                            <p class="title1 three"> 项目描述: </p>
+							<div class="desc">实现一个在PC端的飞机战斗游戏，通过鼠标移动来控制飞机的位置移动，击打对面的敌机，并躲避敌人的子弹
+							</div>
                            <!-- <img src="img/plane-game.png">-->
-                        </li>
+                        </li>					
+						 <!--<li>
+                            <div class="circle"></div>
+                            <h4>
+                               礼品商城的静态页面开发
+                                <a href="https://github.com/poetries/project-demos/tree/gh-pages/web/shop" target="_blank"><i class="icon-link"></i>源代码</a>
+                                <a href="http://blog.poetries.top/project-demos/web/shop/dist/html/index.html" target="_blank"><i class="icon-link"></i>演示</a>
+                            </h4>
+                            <p> 独立完成一个网站的各个页面的开发，首页、商品详情页、登录页、订单页、注册等页面。使用gulp构建工作流。</p>
+                            <!--  <img src="img/shop.png">
+                        </li>-->
+						
 						<li>
 						 <div class="circle"></div>
                             <h4>
@@ -221,7 +265,9 @@
                                 <a href="https://github.com/poetries/Animate" target="_blank"><i class="icon-link"></i>源码</a>
                                 <a href="https://www.npmjs.com/package/poetriesanimate" target="_blank"><i class="icon-link"></i>npm</a>
                             </h4>
-                            <p> 实现一个运动框架的速度版和时间版，借此流畅书写运动特效。npm下载量50+</p>
+                            <p class="title1 third">项目描述: </p>
+							<div class="desc">实现一个运动框架的速度版和时间版，借此流畅书写运动特效。npm下载量50+
+							</div>
                            <!-- <img src="img/plane-game.png">-->
                         </li>
     
